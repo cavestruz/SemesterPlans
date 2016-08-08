@@ -1,0 +1,312 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Template: Curriculum Vitae
+%
+% Source: http://www.howtotex.com/
+% Feel free to distribute this template, but please keep the
+% referal to HowToTeX.com.
+% Date: July 2011
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use writeLaTeX: 
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% Bookmark this page and share the URL with your co-authors. They can
+% edit at the same time!
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+% If you're new to LaTeX, the wikibook is a great place to start:
+% http://en.wikibooks.org/wiki/LaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[paper=a4,fontsize=11pt]{scrartcl} % KOMA-article class
+
+\usepackage[english]{babel}
+\usepackage{soul}
+\usepackage[utf8x]{inputenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}     % Math packages
+\usepackage{graphicx}                    % Enable pdflatex
+\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
+\usepackage{geometry}
+\textheight=700px                    % Saving trees ;-)
+\usepackage{url}
+
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+
+%%% Custom sectioning (sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}
+
+\sectionfont{%            % Change font of \section command
+  \usefont{OT1}{phv}{b}{n}%% bch-b-n: CharterBT-Bold font
+  \sectionrule{0pt}{0pt}{-5pt}{3pt}}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888888888}% Box to align text
+\newcommand{\sepspace}{\vspace*{1.5em}}% Vertical space macro
+\newcommand{\dailyspace}{\vspace*{1.0em}}% Vertical space macro
+\newcommand{\smallspace}{\vspace*{0.7em}}% Vertical space macro
+
+\newcommand{\MyName}[1]{ % Name
+  \Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+  \par \normalsize \normalfont}
+
+\newcommand{\MySlogan}[1]{ % Slogan (optional)
+  \large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+  \par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+
+\newcommand{\MajorProjectDescription}[2]{
+  \vspace{10pt}\noindent\hangindent=0.2em\hangafter=0 % Indentation
+    \textbf{#1}\par\vspace{5pt}\par}       % Entry name (birth, address, etc.)
+
+
+\newcommand{\MajorProjectGoal}[1]{
+  \hspace{5pt} #1 \par}    % Entry value
+
+\newcommand{\WeeklyEntry}[2]{
+  \vspace{5pt}\noindent \textbf{#1} \hfill      % Study
+  \colorbox{Black}{%
+    \parbox{25em}{%
+      \hfill\color{White}#2}} \par\vspace{5pt}}  % Dates
+
+\newcommand{\DailyEntry}[1]{
+  \dailyspace
+  \noindent {\bf\textit{#1}} \par\smallspace}  % Day of week and Date
+
+\newcommand{\Project}[1]{
+  \smallspace
+  \noindent \textit{#1:}\par        % Project
+}
+
+\newcommand{\Task}[1]{
+  \hspace{3pt} {\small\bf #1} \par\par % Task Description
+}
+
+\newcommand{\MiniTask}[1]{
+  \hspace{20pt} {\scriptsize$\blacksquare$}\hspace{4pt}{\small #1} \par\par % Task Description
+}
+
+\newcommand{\IP}[0]{
+  \Project{\textcolor{red}{Image Processing}}
+}
+
+\newcommand{\IE}[0]{
+  \Project{\textcolor{green}{ICM Evolution}}
+}
+
+\newcommand{\Diss}[0]{
+  \Project{\textcolor{blue}{Dissertation Revisions}}
+}
+
+\newcommand{\Errands}[0]{
+  \Project{\textcolor{magenta}{Errands}}
+}
+
+\newcommand{\TravelTalks}[0]{
+  \Project{\textcolor{brown}{Travel and Talks}}
+}
+
+\newcommand{\DoneTask}[1]{
+  \hspace{3pt}  {\small\st{#1}} \par\par% Task Description
+}
+
+\newcommand{\DoneMiniTask}[1]{
+  \hspace{20pt} {\scriptsize$\blacksquare$}\hspace{4pt} {\small\st{#1}}  % Task Description
+  \par\par
+}
+
+
+\newcommand{\Key}[2]{      % Same as \PersonalEntry
+  \noindent\hangindent=2em\hangafter=0 % Indentation
+  \parbox{\spacebox}{        % Box to align text
+    \textit{#1}}   % Entry name (birth, address, etc.)
+  \hspace{1.5em} #2 \par}    % Entry value
+
+
+
+%%% Begin Document
+%%% ------------------------------------------------------------
+\begin{document}
+% you can upload a photo and include it here...
+%\begin{wrapfigure}{l}{0.5\textwidth}
+%\vspace*{-2em}
+%\includegraphics[width=0.15\textwidth]{photo}
+%\end{wrapfigure}
+
+\MyName{Camille Avestruz}
+\MySlogan{End of Summer 2016 Project Plans}
+
+\sepspace
+
+%%% Major Projects
+%%% ------------------------------------------------------------
+\NewPart{Major Projects and Goals}{}
+
+\MajorProjectDescription{\textcolor{red}{Image Processing for Strong Lensing}}
+
+\Task{Check that reading in fits is comparable to png}
+\Task{Get a better score from grid search parameters}
+\Task{Run the pipeline with SVM instead of Logistic Regression as a classifier}
+\Task{Add other image processing components}
+\MiniTask{Test each image processing component with a subset of the data}
+\Task{Compile the purity and completeness figures for the different combinations of image processing}
+\Task{Understand why some images were false positives or false negatives under given combinations of the image processing}
+\Task{Write each section up}
+\Task{Get code into publicly releasable form}
+
+\MajorProjectDescription{\textcolor{green}{ICM Evolution and Scaling Relations}}
+
+\Task{Automate what I pull out of the code}
+\Task{Get a predicted Y-M as a function of peak height and redshift}
+\Task{Decide what I want out of this paper – what do my results imply?}
+\Task{Chat with Andrey to figure out least publishable unit.}
+\Task{Begin shaping paper with a summary and story}
+\Task{Choose key plots for story}
+\Task{Put together the story in words}
+
+\MajorProjectDescription{\textcolor{blue}{Dissertation Revisions}}
+
+\Task{Go through Chapter 2 revisions}
+\MiniTask{Something about line of sight dl vs. dV in the EMM 
+description?}
+\MiniTask{Remove the metallicity figure - can't find colorbar that went 
+here.  Maybe add the figure of clumping for NR, CSF, and AGN instead?}
+\MiniTask{Can't find figures for the mechanical feedback module tests: rowse through the old google blogger archives.  
+Otherwise, take out the mechanical module description(?)}
+\MiniTask{Conclude with other works that have extended beyond the BS09 
+model: Ramses (the Martizzi and Dubois papers), Choi+Ostriker papers, Steinborn+ in the Munich group, which was based on the Gaspari+.... 
+Emphasize that these works provide the context for future work as outlined in Chapter 5.}
+\Task{Email people}
+\MiniTask{Email Sandy, get other to-dos}
+\MiniTask{Email Committee with summary of changes}
+\MiniTask{Submit all necessary paperwork}
+\Task{Get Proof of Deposit/Completion from Registrar}
+\MiniTask{Contact Registrar}
+\MiniTask{Forward relevant info to MMiller}
+
+\pagebreak
+%%% Weekly Plans
+%%% ------------------------------------------------------------
+\NewPart{Weekly Plans}{}
+%%% ------------------------------------------------------------
+\WeeklyEntry{8 Aug 2016 - 12 Aug 2016}{Week 1}
+%%% ------------------------------------------------------------
+%%% ------------------------------------------------------------
+\DailyEntry{Monday, 8 Aug 2016}
+%%% ------------------------------------------------------------
+\IP
+\Task{Check that reading in fits is comparable to png.  We want to use fits because these are floats, instead of unsigned integer (in png)}
+\DoneMiniTask{Use getdata from https://pythonhosted.org/pyfits/ to read in fits as 2d array.  \textbf{This is a PrimaryHDU type, and not easy to compare with float. Also, need to index the 0th entry to get the same np.shape of 300,300}}
+\DoneMiniTask{Compare the shapes of 2d array from getdata and imread on png}
+\DoneMiniTask{Change the piece of code from imread to getdata. {\bf Actually, changing to the astropy.io.fits.  Should be similar to getdata, but returns a 300,300 numpy array of floats.}}
+\DoneMiniTask{Debug problem: ``map.error: [Errno 24] Too many open files''. \textbf{Googled solution is to use .copy because the list appending keeps files open}}
+\DoneMiniTask{Issue with reading in fits: ``raise ValueError(``Images of type float must be between -1 and 1.'') ``: https://github.com/scikit-image/scikit-image/issues/1627 $\rightarrow$ \textbf{I just normalized by the maximum in each image}}
+
+\MiniTask{Possible problem: ``Warning: Possible precision loss when converting from float64 to uint8''}
+\MiniTask{Run on a subset (e.g. 200) with using getdata for reading fits$\rightarrow$\textbf{See test3.txt, likely overfit, or info loss with uint8.  Will run on all in test4.txt while doing IE.}}
+
+\IE
+\Task{Figure out a mini list for this}
+\MiniTask{Look over git log}
+\MiniTask{Map out changes that still need to be made before getting my Y-M relations}
+\Diss
+\Task{Something about line of sight dl vs. dV in the EMM description?}
+\MiniTask{Look up the links I saved}
+\MiniTask{Decide how I want to ``correct'' this}
+%%% ------------------------------------------------------------
+\DailyEntry{Tuesday, 9 Aug 2016}
+%%% ------------------------------------------------------------
+\IP
+\Task{Get code to run on appropriate grid search parameters}
+\MiniTask{Produce intermediate images after each preprocessing step - e.g. see example in http://scikit-image.org/docs/dev/auto_examples/applications/plot_rank_filters.html}
+\MiniTask{In ipython notebook or ipython read in 5 images}
+\MiniTask{Run median filter on one, produce a png of before/after}
+\MiniTask{Run HOG on one, produce a png of after}
+\MiniTask{Try with different parameters for median}
+\MiniTask{Try with different parameters for HOG, given best params for median}
+\MiniTask{Put the image production into a function that takes in a set of parameters of each}
+\IE
+\Task{Get Predicted Y-M Relation}
+\Diss
+\Task{Remove the metallicity figure - can’t find colorbar that went here. Maybe add the figure of clumping for NR, CSF, and AGN instead?}
+%%% ------------------------------------------------------------
+\DailyEntry{Wednesday, 10 Aug 2016}
+%%% ------------------------------------------------------------
+\IP
+\Task{}
+\MiniTask{}
+\IE
+\Task{}
+\MiniTask{}
+\Diss
+\Task{Conclude with other works that have extended beyond the BS09 model}
+\MiniTask{Add citations for: Ramses (the Martizzi and Dubois papers), Choi+Ostriker papers, Steinborn+ in the Munich group, which was based on the Gaspari+.... }
+\Minitask{Emphasize that these works provide the context for future work as outlined in Chapter 5.}
+%%% ------------------------------------------------------------
+\DailyEntry{Thursday, 11 Aug 2016}
+%%% ------------------------------------------------------------
+\IP
+\Task{}
+\MiniTask{}
+\IE
+\Task{}
+\MiniTask{}
+\Diss
+\Task{}
+\MiniTask{}
+
+
+%%% ------------------------------------------------------------
+\DailyEntry{Friday, 12 Aug 2016}
+%%% ------------------------------------------------------------
+\IP
+\Task{}
+\MiniTask{}
+\IE
+\Task{}
+\MiniTask{}
+\Diss
+\Task{}
+\MiniTask{}
+
+
+
+%%% ------------------------------------------------------------
+\sepspace
+%%% Broad Schedule
+%%% ------------------------------------------------------------
+\NewPart{Broad Schedule}{}
+\Key{Week 1: 8/8-8/12}{\textcolor{green}{ICM MiniList and Y-M}}
+\Key{}{\textcolor{red}{Check that reading in fits is comparable to png}}
+\Key{}{\textcolor{blue}{Go through Chapter 2 revisions}}
+\sepspace
+\Key{Week 2: 8/15-8/19}{\textcolor{green}{Decide what I want out of this paper – what do my results imply?}}
+\Key{}{\textcolor{red}{Get a better score from grid search parameters}}
+\Key{}{\textcolor{blue}{Email people}}
+\Key{}{\textcolor{brown}{Make Poster}}
+\sepspace
+\Key{Week 3: 8/22-8/26}{\textcolor{brown}{Physics of the ICM at U Minn (Travel 8/21-24)}}
+\Key{}{\textcolor{brown}{Put together slides for Fellows at the Frontiers}}
+\Key{}{\textcolor{blue}{Get Proof of Deposit/Completion from Registrar}}
+\sepspace
+\Key{Week 4: 8/29-9/2}{\textcolor{red}{Get SVM implemented}}
+\Key{}{\textcolor{brown}{Fellows at the Frontiers (Travel 8/31-9/2)}}
+\sepspace
+\Key{Week 5: 9/6-9/9}{\textcolor{red}{Test SVM parameters}}}
+\sepspace
+\Key{Week 6: 9/12-9/16}{}
+\sepspace
+\Key{Week 7: 9/19-9/23}{}
+
+\end{document}
+
+
