@@ -153,8 +153,9 @@
 
 \MajorProjectDescription{\textcolor{red}{Image Processing for Strong Lensing}}
 
-\Task{Check that reading in fits is comparable to png}
+\DoneTask{Check that reading in fits is comparable to png}
 \Task{Get a better score from grid search parameters}
+\MiniTask{Set up on Midway(?)}
 \Task{Run the pipeline with SVM instead of Logistic Regression as a classifier}
 \Task{Add other image processing components}
 \MiniTask{Test each image processing component with a subset of the data}
@@ -166,6 +167,9 @@
 \MajorProjectDescription{\textcolor{green}{ICM Evolution and Scaling Relations}}
 
 \Task{Automate what I pull out of the code}
+\MiniTask{Add to the ``pipeline'' to build the code from the training set}
+\MiniTask{Calculate Yth and Ynt for 200m, 500c as a derived field to pull}
+\MiniTask{Will have to account for radial quantities vs. integrated quantities in building models}
 \Task{Get a predicted Y-M as a function of peak height and redshift}
 \Task{Decide what I want out of this paper – what do my results imply?}
 \Task{Chat with Andrey to figure out least publishable unit.}
@@ -207,7 +211,7 @@ Emphasize that these works provide the context for future work as outlined in Ch
 \Task{Check that reading in fits is comparable to png.  We want to use fits because these are floats, instead of unsigned integer (in png)}
 \DoneMiniTask{Use getdata from https://pythonhosted.org/pyfits/ to read in fits as 2d array.  \textbf{This is a PrimaryHDU type, and not easy to compare with float. Also, need to index the 0th entry to get the same np.shape of 300,300}}
 \DoneMiniTask{Compare the shapes of 2d array from getdata and imread on png}
-\DoneMiniTask{Change the piece of code from imread to getdata. {\bf Actually, changing to the astropy.io.fits.  Should be similar to getdata, but returns a 300,300 numpy array of floats.}}
+\DoneMiniTask{Change the piece of code from imread to getdata. \textbf{Actually, changing to the astropy.io.fits.  Should be similar to getdata, but returns a 300,300 numpy array of floats.}}
 \DoneMiniTask{Debug problem: ``map.error: [Errno 24] Too many open files''. \textbf{Googled solution is to use .copy because the list appending keeps files open}}
 \DoneMiniTask{Issue with reading in fits: ``raise ValueError(``Images of type float must be between -1 and 1.'') ``: https://github.com/scikit-image/scikit-image/issues/1627 $\rightarrow$ \textbf{I just normalized by the maximum in each image}}
 
@@ -216,8 +220,13 @@ Emphasize that these works provide the context for future work as outlined in Ch
 
 \IE
 \Task{Figure out a mini list for this}
-\MiniTask{Look over git log}
-\MiniTask{Map out changes that still need to be made before getting my Y-M relations}
+\DoneMiniTask{Look over git log}
+\DoneMiniTask{Map out changes that still need to be made before getting my Y-M relations}
+\Task{Get functionality from dev/ to the run\_pipeline.py}
+\MiniTask{Get fit\_samples ported over}
+\MiniTask{Port over generate\_model\_profiles}
+\MiniTask{Add functionality for an integrated quantity, e.g. mass (the model *should* be close to the computed relation, good test - decide how I want to treat integrated quantities.}
+\MiniTask{Save the trained models (aexp, nu) pairs - pickle files(?)}
 \Diss
 \Task{Something about line of sight dl vs. dV in the EMM description?}
 \MiniTask{Look up the links I saved}
@@ -227,7 +236,7 @@ Emphasize that these works provide the context for future work as outlined in Ch
 %%% ------------------------------------------------------------
 \IP
 \Task{Get code to run on appropriate grid search parameters}
-\MiniTask{Produce intermediate images after each preprocessing step - e.g. see example in http://scikit-image.org/docs/dev/auto_examples/applications/plot_rank_filters.html}
+\MiniTask{Produce intermediate images after each preprocessing step - e.g. see example in http://scikit-image.org/docs/dev/auto\_examples/applications/plot\_rank\_filters.html}
 \MiniTask{In ipython notebook or ipython read in 5 images}
 \MiniTask{Run median filter on one, produce a png of before/after}
 \MiniTask{Run HOG on one, produce a png of after}
