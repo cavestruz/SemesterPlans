@@ -277,8 +277,9 @@ include anything else that you'd like us to hear about.}
 \DoneMiniTask{In ipython notebook read in 2 images}
 \MiniTask{Used \href{http://www.astropy.org/astropy-tutorials/FITS-images.html}{astropy} site}
 
-\MiniTask{Render Median then log normal it}
-\MiniTask{Log the numpy array then render median - Compare}
+\DoneMiniTask{Render Median then log normal it}
+\DoneMiniTask{Log the numpy array then render median - Compare$rightarrow$ Logging, normalizing, then taking the median preserves small scale features.}
+\DoneMiniTask{Try with different parameters for median}
 
 
 \Diss
@@ -309,11 +310,9 @@ completion.}
 
 \Task{Get code to run on appropriate grid search parameters}
 \MiniTask{Produce intermediate images after each preprocessing step - e.g. see example in http://scikit-image.org/docs/dev/auto\_examples/applications/plot\_rank\_filters.html}
-\MiniTask{Run median filter on one, produce a png of before/after}
-\MiniTask{Run HOG on one, produce a png of after}
-\MiniTask{Try with different parameters for median}
-\MiniTask{Try with different parameters for HOG, given best params for median}
+\MiniTask{Try with different parameters for HOG, given best params for median - Note: HOG outputs a 1-d histogram, need to find a good way to visualize the info we get out of this}
 \MiniTask{Put the image production into a function that takes in a set of parameters of each}
+
 \IE
 \Task{Get functionality from dev/ to the run\_pipeline.py}
 \MiniTask{Add functionality for an integrated quantity, e.g. mass (the model *should* be close to the computed relation, good test - decide how I want to treat integrated quantities.}
