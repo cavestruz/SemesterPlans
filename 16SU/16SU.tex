@@ -26,6 +26,7 @@
 
 \usepackage[english]{babel}
 \usepackage{soul}
+\usepackage{hyperref}
 \usepackage[utf8x]{inputenc}
 \usepackage[protrusion=true,expansion=true]{microtype}
 \usepackage{amsmath,amsfonts,amsthm,amssymb}     % Math packages
@@ -116,7 +117,7 @@
 }
 
 \newcommand{\DoneTask}[1]{
-  \hspace{3pt}  {\small\st{#1}} \par\par% Task Description
+  \hspace{3pt}  {\small\st{\bf #1}} \par\par% Task Description
 }
 
 \newcommand{\DoneMiniTask}[1]{
@@ -197,41 +198,7 @@ Emphasize that these works provide the context for future work as outlined in Ch
 \MiniTask{Contact Registrar}
 \MiniTask{Forward relevant info to MMiller}
 
-\pagebreak
-%%% Weekly Plans
-%%% ------------------------------------------------------------
-\NewPart{Weekly Plans}{}
-%%% ------------------------------------------------------------
-\WeeklyEntry{8 Aug 2016 - 12 Aug 2016}{Week 1}
-%%% ------------------------------------------------------------
-%%% ------------------------------------------------------------
-\DailyEntry{Monday, 8 Aug 2016}
-%%% ------------------------------------------------------------
-\IP
-\Task{Check that reading in fits is comparable to png.  We want to use fits because these are floats, instead of unsigned integer (in png)}
-\DoneMiniTask{Use getdata from https://pythonhosted.org/pyfits/ to read in fits as 2d array.  \textbf{This is a PrimaryHDU type, and not easy to compare with float. Also, need to index the 0th entry to get the same np.shape of 300,300}}
-\DoneMiniTask{Compare the shapes of 2d array from getdata and imread on png}
-\DoneMiniTask{Change the piece of code from imread to getdata. \textbf{Actually, changing to the astropy.io.fits.  Should be similar to getdata, but returns a 300,300 numpy array of floats.}}
-\DoneMiniTask{Debug problem: ``map.error: [Errno 24] Too many open files''. \textbf{Googled solution is to use .copy because the list appending keeps files open}}
-\DoneMiniTask{Issue with reading in fits: ``raise ValueError(``Images of type float must be between -1 and 1.'') ``: https://github.com/scikit-image/scikit-image/issues/1627 $\rightarrow$ \textbf{I just normalized by the maximum in each image}}
-
-\MiniTask{Possible problem: ``Warning: Possible precision loss when converting from float64 to uint8''}
-\MiniTask{Run on a subset (e.g. 200) with using getdata for reading fits$\rightarrow$\textbf{See test3.txt, likely overfit, or info loss with uint8.  Will run on all in test4.txt while doing IE.}}
-
-\IE
-\Task{Figure out a mini list for this}
-\DoneMiniTask{Look over git log}
-\DoneMiniTask{Map out changes that still need to be made before getting my Y-M relations}
-\Task{Get functionality from dev/ to the run\_pipeline.py}
-\MiniTask{Get fit\_samples ported over, looking at test\_load\_samples.fit\_samples, port into training\_steps.py}
-\MiniTask{Port over generate\_model\_profiles}
-\MiniTask{Add functionality for an integrated quantity, e.g. mass (the model *should* be close to the computed relation, good test - decide how I want to treat integrated quantities.}
-\MiniTask{Save the trained models (aexp, nu) pairs - pickle files(?)}
-\Diss
-\Task{Something about line of sight dl vs. dV in the EMM description?}
-\MiniTask{Look up the links I saved}
-\MiniTask{Decide how I want to ``correct'' this}
-\Errands
+\MajorProjectDescription{\textcolor{magenta}{Errands}}
 \Task{KICP one page annual report}
 \MiniTask{1) Give us a feeling for the science you have been working on. Mention
 papers that you may have published over the past year or that are nearing
@@ -260,8 +227,74 @@ your experience at KICP?}
 
 \MiniTask{8) Please comment on your overall experience as a KICP fellow. Feel free to
 include anything else that you'd like us to hear about.}
+
+\Task{Feedback for Collaborators}
+\MiniTask{Download and look over \href{https://urldefense.proofpoint.com/v2/url?u=https-3A__bitbucket.org_ethlau_eos&d=CwMCaQ&c=-dg2m7zWuuDZ0MUcV7Sdqw&r=gJS8dUZZIuuJT4PmC0HIzER-8ltvgYEa7iI1ZqHFWqQ&m=KIyZYUSEXQh_YCPHD7mLMJRY-2zlck11La--5cznuPg&s=jWpko2c_6XCpxR-K04ogwVvb1O9rbwRhDrkRe-GNF7s&e=}{Erwin's EoS Paper}}
+\MiniTask{Watch \href{http://online.kitp.ucsb.edu/online/colduniv16/mccourt/}{McCourt Talk}}
+\MiniTask{Look at Phil's paper, especially sec 2.2.3, and App A}
+
+\pagebreak
+%%% Weekly Plans
+%%% ------------------------------------------------------------
+\NewPart{Weekly Plans}{}
+%%% ------------------------------------------------------------
+\WeeklyEntry{8 Aug 2016 - 12 Aug 2016}{Week 1}
+%%% ------------------------------------------------------------
+%%% ------------------------------------------------------------
+\DailyEntry{Monday, 8 Aug 2016}
+%%% ------------------------------------------------------------
+\IP
+\Task{Check that reading in fits is comparable to png.  We want to use fits because these are floats, instead of unsigned integer (in png)}
+\DoneMiniTask{Use getdata from https://pythonhosted.org/pyfits/ to read in fits as 2d array.  \textbf{This is a PrimaryHDU type, and not easy to compare with float. Also, need to index the 0th entry to get the same np.shape of 300,300}}
+\DoneMiniTask{Compare the shapes of 2d array from getdata and imread on png}
+\DoneMiniTask{Change the piece of code from imread to getdata. \textbf{Actually, changing to the astropy.io.fits.  Should be similar to getdata, but returns a 300,300 numpy array of floats.}}
+\DoneMiniTask{Debug problem: ``map.error: [Errno 24] Too many open files''. \textbf{Googled solution is to use .copy because the list appending keeps files open}}
+\DoneMiniTask{Issue with reading in fits: ``raise ValueError(``Images of type float must be between -1 and 1.'') ``: https://github.com/scikit-image/scikit-image/issues/1627 $\rightarrow$ \textbf{I just normalized by the maximum in each image}}
+
+\IE
+\Task{Figure out a mini list for this}
+\DoneMiniTask{Look over git log}
+\DoneMiniTask{Map out changes that still need to be made before getting my Y-M relations}
+\Task{Get functionality from dev/ to the run\_pipeline.py}
+\DoneMiniTask{Get fit\_samples ported over, looking at test\_load\_samples.fit\_samples, port into training\_steps.py}
 %%% ------------------------------------------------------------
 \DailyEntry{Tuesday, 9 Aug 2016}
+%%% ------------------------------------------------------------
+\IE
+\Task{Get functionality from dev/ to the run\_pipeline.py}
+\MiniTask{Test steps through fitting the samples}
+\MiniTask{Port over generate\_model\_profiles}
+\MiniTask{Add functionality for an integrated quantity, e.g. mass (the model *should* be close to the computed relation, good test - decide how I want to treat integrated quantities.}
+\MiniTask{Save the trained models (aexp, nu) pairs - pickle files(?)}
+
+
+\IP
+\Task{Check that reading in fits is comparable to png.  We want to use fits because these are floats, instead of unsigned integer (in png)}
+
+\MiniTask{Possible problem: ``Warning: Possible precision loss when converting from float64 to uint8''}
+\MiniTask{Run on a subset (e.g. 200) with using getdata for reading fits$\rightarrow$\textbf{See test3.txt, likely overfit, or info loss with uint8.  Will run on all in test4.txt while doing IE.}}
+\MiniTask{In ipython notebook, figure out how to render images of fits files.}
+\MiniTask
+
+
+
+\Diss
+\Task{Something about line of sight dl vs. dV in the EMM description?}
+\MiniTask{Look up the links I saved}
+\MiniTask{Decide how I want to ``correct'' this}
+
+\Errands
+\Task{KICP one page annual report}
+\MiniTask{1) Give us a feeling for the science you have been working on. Mention
+papers that you may have published over the past year or that are nearing
+completion.}
+
+\MiniTask{2) Tell us about collaborations you are taking part in either within or
+outside of the KICP. Can the KICP play a role in facilitating/improving
+these?}
+
+%%% ------------------------------------------------------------
+\DailyEntry{Wednesday, 10 Aug 2016}
 %%% ------------------------------------------------------------
 \IP
 \Task{Get code to run on appropriate grid search parameters}
@@ -274,16 +307,6 @@ include anything else that you'd like us to hear about.}
 \MiniTask{Put the image production into a function that takes in a set of parameters of each}
 \IE
 \Task{Get Predicted Y-M Relation}
-\Diss
-\Task{Remove the metallicity figure - can’t find colorbar that went here. Maybe add the figure of clumping for NR, CSF, and AGN instead?}
-%%% ------------------------------------------------------------
-\DailyEntry{Wednesday, 10 Aug 2016}
-%%% ------------------------------------------------------------
-\IP
-\Task{}
-\MiniTask{}
-\IE
-\Task{}
 \MiniTask{}
 \Diss
 \Task{Conclude with other works that have extended beyond the BS09 model}
@@ -299,8 +322,8 @@ include anything else that you'd like us to hear about.}
 \Task{}
 \MiniTask{}
 \Diss
-\Task{}
-\MiniTask{}
+\Diss
+\Task{Remove the metallicity figure - can’t find colorbar that went here. Maybe add the figure of clumping for NR, CSF, and AGN instead?}
 
 
 %%% ------------------------------------------------------------
