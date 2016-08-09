@@ -156,7 +156,7 @@
 
 \DoneTask{Check that reading in fits is comparable to png}
 \Task{Get a better score from grid search parameters}
-\MiniTask{Set up on Midway(?)}
+\MiniTask{Set up on Midway - look at ``onboarding'' sheet of paper Valeri scribbled notes on}
 \Task{Run the pipeline with SVM instead of Logistic Regression as a classifier}
 \Task{Add other image processing components}
 \MiniTask{Test each image processing component with a subset of the data}
@@ -172,6 +172,7 @@
 \MiniTask{Calculate Yth and Ynt for 200m, 500c as a derived field to pull}
 \MiniTask{Will have to account for radial quantities vs. integrated quantities in building models}
 \Task{Get a predicted Y-M as a function of peak height and redshift}
+\MiniTask{Double check the peak height calculation}
 \Task{Decide what I want out of this paper – what do my results imply?}
 \Task{Chat with Andrey to figure out least publishable unit.}
 \Task{Begin shaping paper with a summary and story}
@@ -260,22 +261,24 @@ include anything else that you'd like us to hear about.}
 %%% ------------------------------------------------------------
 \DailyEntry{Tuesday, 9 Aug 2016}
 %%% ------------------------------------------------------------
+
 \IE
 \Task{Get functionality from dev/ to the run\_pipeline.py}
-\MiniTask{Test steps through fitting the samples}
-\MiniTask{Port over generate\_model\_profiles}
-\MiniTask{Add functionality for an integrated quantity, e.g. mass (the model *should* be close to the computed relation, good test - decide how I want to treat integrated quantities.}
-\MiniTask{Save the trained models (aexp, nu) pairs - pickle files(?)}
+\DoneMiniTask{Test steps through fitting the samples in ipython notebook}
+\DoneMiniTask{Port over generate\_model\_profiles, which means taking trained\_models and predicting}
 
 
 \IP
 \Task{Check that reading in fits is comparable to png.  We want to use fits because these are floats, instead of unsigned integer (in png)}
+\MiniTask{Possible problem: ``Warning: Possible precision loss when converting from float64 to uint8'' $\rightarrow$ \textbf{Log it first(?)}}
+\MiniTask{Run on a subset (e.g. 200) with using getdata for reading fits$\rightarrow$\textbf{See test3.txt, likely overfit, or info loss with uint8.  Will run on all in test4.txt while doing IE.  Log it first(?)}}
+\DoneMiniTask{Download sample HST-like fits files from photon}
+\DoneMiniTask{In ipython notebook, figure out how to render images of fits files.}
+\DoneMiniTask{In ipython notebook read in 2 images}
+\MiniTask{Used \href{http://www.astropy.org/astropy-tutorials/FITS-images.html}{astropy} site}
 
-\MiniTask{Possible problem: ``Warning: Possible precision loss when converting from float64 to uint8''}
-\MiniTask{Run on a subset (e.g. 200) with using getdata for reading fits$\rightarrow$\textbf{See test3.txt, likely overfit, or info loss with uint8.  Will run on all in test4.txt while doing IE.}}
-\MiniTask{In ipython notebook, figure out how to render images of fits files.}
-\MiniTask
-
+\MiniTask{Render Median then log normal it}
+\MiniTask{Log the numpy array then render median - Compare}
 
 
 \Diss
@@ -285,29 +288,37 @@ include anything else that you'd like us to hear about.}
 
 \Errands
 \Task{KICP one page annual report}
+
 \MiniTask{1) Give us a feeling for the science you have been working on. Mention
 papers that you may have published over the past year or that are nearing
 completion.}
 
-\MiniTask{2) Tell us about collaborations you are taking part in either within or
-outside of the KICP. Can the KICP play a role in facilitating/improving
-these?}
+\MiniTask{2) Tell us about collaborations you are taking part in
+  either within or outside of the KICP. Can the KICP play a role in
+  facilitating/improving these?}
 
 %%% ------------------------------------------------------------
 \DailyEntry{Wednesday, 10 Aug 2016}
 %%% ------------------------------------------------------------
 \IP
+\Task{Get set up on Midway}
+\MiniTask{Get my password....}
+\MiniTask{Pull the code from repo onto midway}
+\MiniTask{Download fits images from photon into midway}
+\MiniTask{Test bits of code in midway to make sure everything necessary is downloaded}
+
 \Task{Get code to run on appropriate grid search parameters}
 \MiniTask{Produce intermediate images after each preprocessing step - e.g. see example in http://scikit-image.org/docs/dev/auto\_examples/applications/plot\_rank\_filters.html}
-\MiniTask{In ipython notebook or ipython read in 5 images}
 \MiniTask{Run median filter on one, produce a png of before/after}
 \MiniTask{Run HOG on one, produce a png of after}
 \MiniTask{Try with different parameters for median}
 \MiniTask{Try with different parameters for HOG, given best params for median}
 \MiniTask{Put the image production into a function that takes in a set of parameters of each}
 \IE
-\Task{Get Predicted Y-M Relation}
-\MiniTask{}
+\Task{Get functionality from dev/ to the run\_pipeline.py}
+\MiniTask{Add functionality for an integrated quantity, e.g. mass (the model *should* be close to the computed relation, good test - decide how I want to treat integrated quantities.}
+\MiniTask{Save the trained models (aexp, nu) pairs - pickle files(?)}
+
 \Diss
 \Task{Conclude with other works that have extended beyond the BS09 model}
 \MiniTask{Add citations for: Ramses (the Martizzi and Dubois papers), Choi+Ostriker papers, Steinborn+ in the Munich group, which was based on the Gaspari+.... }
@@ -315,10 +326,14 @@ these?}
 %%% ------------------------------------------------------------
 \DailyEntry{Thursday, 11 Aug 2016}
 %%% ------------------------------------------------------------
+\IE
+\Task{Get Predicted Y-M Relation}
+\MiniTask{}
+
 \IP
 \Task{}
 \MiniTask{}
-\IE
+
 \Task{}
 \MiniTask{}
 \Diss
@@ -346,6 +361,7 @@ these?}
 %%% Broad Schedule
 %%% ------------------------------------------------------------
 \NewPart{Broad Schedule}{}
+
 \Key{Week 1: 8/8-8/12}{\textcolor{green}{ICM MiniList and Y-M}}
 \Key{}{\textcolor{red}{Check that reading in fits is comparable to png}}
 \Key{}{\textcolor{blue}{Go through Chapter 2 revisions}}
