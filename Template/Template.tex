@@ -1,0 +1,230 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Template: Curriculum Vitae
+%
+% Source: http://www.howtotex.com/
+% Feel free to distribute this template, but please keep the
+% referal to HowToTeX.com.
+% Date: July 2011
+%
+% This latex file was modified to serve as a semester planner. 
+% Author: Camille Avestruz
+% Date: August 2016
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use writeLaTeX: 
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% Bookmark this page and share the URL with your co-authors. They can
+% edit at the same time!
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+% If you're new to LaTeX, the wikibook is a great place to start:
+% http://en.wikibooks.org/wiki/LaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[paper=a4,fontsize=11pt]{scrartcl} % KOMA-article class
+
+\usepackage[english]{babel}
+\usepackage{soul}
+\usepackage{hyperref}
+\usepackage[utf8x]{inputenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}     % Math packages
+\usepackage{graphicx}                    % Enable pdflatex
+\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
+\usepackage{geometry}
+\textheight=700px                    % Saving trees ;-)
+\usepackage{url}
+
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+
+%%% Custom sectioning (sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}
+
+\sectionfont{%            % Change font of \section command
+  \usefont{OT1}{phv}{b}{n}%% bch-b-n: CharterBT-Bold font
+  \sectionrule{0pt}{0pt}{-5pt}{3pt}}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888888888}% Box to align text
+\newcommand{\sepspace}{\vspace*{1.5em}}% Vertical space macro
+\newcommand{\dailyspace}{\vspace*{1.0em}}% Vertical space macro
+\newcommand{\smallspace}{\vspace*{0.7em}}% Vertical space macro
+
+\newcommand{\MyName}[1]{ % Name
+  \Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+  \par \normalsize \normalfont}
+
+\newcommand{\MySlogan}[1]{ % Slogan (optional)
+  \large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+  \par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+
+\newcommand{\MajorProjectDescription}[2]{
+  \vspace{10pt}\noindent\hangindent=0.2em\hangafter=0 % Indentation
+    \textbf{#1}\par\vspace{5pt}\par}       % Entry name (birth, address, etc.)
+
+
+\newcommand{\MajorProjectGoal}[1]{
+  \hspace{5pt} #1 \par}    % Entry value
+
+\newcommand{\WeeklyEntry}[2]{
+  \vspace{5pt}\noindent \textbf{#1} \hfill      % Study
+  \colorbox{Black}{%
+    \parbox{25em}{%
+      \hfill\color{White}#2}} \par\vspace{5pt}}  % Dates
+
+\newcommand{\DailyEntry}[1]{
+  \dailyspace
+  \noindent {\textbf{\textit{#1}}} \par\smallspace}  % Day of week and Date
+
+\newcommand{\Project}[1]{
+  \smallspace
+  \noindent \textit{#1:}\par        % Project
+}
+
+\newcommand{\Task}[1]{
+  \hspace{3pt} {\small\textbf{#1}} \par\par % Task Description
+}
+
+\newcommand{\MiniTask}[1]{
+  \hspace{20pt} {\scriptsize$\blacksquare$}\hspace{4pt}{\small #1} \par\par % Task Description
+}
+
+\newcommand{\ProjA}[0]{
+  \Project{\textcolor{red}{Project name A}}
+}
+
+\newcommand{\ProjB}[0]{
+  \Project{\textcolor{green}{Project name B}}
+}
+
+\newcommand{\DoneTask}[1]{
+  \hspace{3pt}  {\small\st{\textbf{#1}}} \par\par% Task Description
+}
+
+\newcommand{\DoneMiniTask}[1]{
+  \hspace{20pt} {\scriptsize$\blacksquare$}\hspace{4pt} {\small\st{#1}}  % Task Description
+  \par\par
+}
+
+
+\newcommand{\Key}[2]{      % Same as \PersonalEntry
+  \noindent\hangindent=2em\hangafter=0 % Indentation
+  \parbox{\spacebox}{        % Box to align text
+    \textit{#1}}   % Entry name (birth, address, etc.)
+  \hspace{1.5em} #2 \par}    % Entry value
+
+
+
+%%% Begin Document
+%%% ------------------------------------------------------------
+\begin{document}
+% you can upload a photo and include it here...
+%\begin{wrapfigure}{l}{0.5\textwidth}
+%\vspace*{-2em}
+%\includegraphics[width=0.15\textwidth]{photo}
+%\end{wrapfigure}
+
+\MyName{Camille Avestruz}
+\MySlogan{End of Summer 2016 Project Plans}
+
+\sepspace
+
+%%% Major Projects
+%%% ------------------------------------------------------------
+\NewPart{Major Projects and Goals}{}
+
+\MajorProjectDescription{\textcolor{red}{Short first project description}}
+\Task{Task 1} 
+\MiniTask{Smaller task that comes to mind}
+
+\MajorProjectDescription{\textcolor{green}{Short second project description}}
+
+\Task{Task 1}
+\MiniTask{Smaller task that comes to mind}
+
+\pagebreak
+%%% Weekly Plans
+%%% ------------------------------------------------------------
+\NewPart{Weekly Plans}{}
+%%% ------------------------------------------------------------
+\WeeklyEntry{8 Aug 2016 - 12 Aug 2016}{Week 1}
+%%% ------------------------------------------------------------
+%%% ------------------------------------------------------------
+\DailyEntry{Monday, 8 Aug 2016}
+%%% ------------------------------------------------------------
+\ProjA
+\Task{First task}
+\DoneMiniTask{First mini-task}
+\MiniTask{Second mini-task}
+
+\ProjB
+\Task{First task}
+
+%%% ------------------------------------------------------------
+\DailyEntry{Tuesday, 9 Aug 2016}
+%%% ------------------------------------------------------------
+
+
+%%% ------------------------------------------------------------
+\DailyEntry{Wednesday, 10 Aug 2016}
+%%% ------------------------------------------------------------
+
+%%% ------------------------------------------------------------
+\DailyEntry{Thursday, 11 Aug 2016}
+%%% ------------------------------------------------------------
+
+
+
+%%% ------------------------------------------------------------
+\DailyEntry{Friday, 12 Aug 2016}
+%%% ------------------------------------------------------------
+
+%%% ------------------------------------------------------------
+\WeeklyEntry{15 Aug 2016 - 19 Aug 2016}{Week 2}
+%%% ------------------------------------------------------------
+%%% ------------------------------------------------------------
+\DailyEntry{Monday, 15 Aug 2016}
+%%% ------------------------------------------------------------
+
+
+%%% ------------------------------------------------------------
+\sepspace
+%%% Broad Schedule
+%%% ------------------------------------------------------------
+\NewPart{Broad Schedule}{}
+
+\Key{Week 1: 8/8-8/12}{\textcolor{green}{ICM MiniList and Y-M}}
+\Key{}{\textcolor{red}{Check that reading in fits is comparable to png}}
+\Key{}{\textcolor{blue}{Go through Chapter 2 revisions}}
+\sepspace
+\Key{Week 2: 8/15-8/19}{\textcolor{green}{Decide what I want out of this paper – what do my results imply?}}
+\Key{}{\textcolor{red}{Get a better score from grid search parameters}}
+\Key{}{\textcolor{blue}{Email people}}
+\Key{}{\textcolor{brown}{Make Poster}}
+\sepspace
+\Key{Week 3: 8/22-8/26}{\textcolor{brown}{Physics of the ICM at U Minn (Travel 8/21-24)}}
+\Key{}{\textcolor{brown}{Put together slides for Fellows at the Frontiers}}
+\Key{}{\textcolor{blue}{Get Proof of Deposit/Completion from Registrar}}
+\sepspace
+\Key{Week 4: 8/29-9/2}{\textcolor{red}{Get SVM implemented}}
+\Key{}{\textcolor{brown}{Fellows at the Frontiers (Travel 8/31-9/2)}}
+\sepspace
+\Key{Week 5: 9/6-9/9}{\textcolor{red}{Test SVM parameters}}}
+\sepspace
+\Key{Week 6: 9/12-9/16}{}
+\sepspace
+\Key{Week 7: 9/19-9/23}{}
+
+\end{document}
+
+
