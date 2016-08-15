@@ -176,6 +176,7 @@
 \MiniTask{Will have to account for radial quantities vs. integrated quantities in building models}
 \Task{Get a predicted Y-M as a function of peak height and redshift}
 \MiniTask{Double check the peak height calculation}
+\Task{Watch David Hogg's colloquium - how did they frame the problem of a data driven model for stars?  Also, were there outliers from the Main Sequence?  Does that apply to the merger/AGN interplay from the Pontzen+16 paper?}
 \Task{Decide what I want out of this paper – what do my results imply?}
 \Task{Chat with Andrey to figure out least publishable unit.}
 \Task{Begin shaping paper with a summary and story}
@@ -207,34 +208,7 @@ Emphasize that these works provide the context for future work as outlined in Ch
 \MiniTask{Analytic formulation, Dalal+10}
 \MiniTask{Non-thermal pressure fraction, Nelson+14b, Avestruz+16}
 
-\Task{KICP one page annual report}
-\MiniTask{1) Give us a feeling for the science you have been working on. Mention
-papers that you may have published over the past year or that are nearing
-completion.}
-
-\MiniTask{2) Tell us about collaborations you are taking part in either within or
-outside of the KICP. Can the KICP play a role in facilitating/improving
-these?}
-
-\MiniTask{3) Give us an idea of your research travel over the past year. What
-meetings have you attended, and did you present at those meetings? Any
-collaboration meetings?}
-
-\MiniTask{4) Have you done any public outreach over the past year? This could include
-public lectures, KICP Saturdays at Adler, tutoring, etc.}
-
-\MiniTask{5) What other activities have you taken part in? Workshop organization?
-Teaching? Mentorship?}
-
-\MiniTask{6) Have you met with your Faculty Mentor? Please comment on your mentorship
-experience at the KICP, and the adequacy of the level of support your are
-receiving.}
-
-\MiniTask{7) Are there particular issues or concerns you want to raise with us about
-your experience at KICP?}
-
-\MiniTask{8) Please comment on your overall experience as a KICP fellow. Feel free to
-include anything else that you'd like us to hear about.}
+\DoneTask{KICP one page annual report}
 
 \Task{Feedback for Collaborators}
 \MiniTask{Download and look over \href{https://urldefense.proofpoint.com/v2/url?u=https-3A__bitbucket.org_ethlau_eos&d=CwMCaQ&c=-dg2m7zWuuDZ0MUcV7Sdqw&r=gJS8dUZZIuuJT4PmC0HIzER-8ltvgYEa7iI1ZqHFWqQ&m=KIyZYUSEXQh_YCPHD7mLMJRY-2zlck11La--5cznuPg&s=jWpko2c_6XCpxR-K04ogwVvb1O9rbwRhDrkRe-GNF7s&e=}{Erwin's EoS Paper}}
@@ -329,13 +303,47 @@ include anything else that you'd like us to hear about.}
 
 \IE
 \Task{Get functionality from dev/ to the run\_pipeline.py}
+\DoneMiniTask{Create a module/function to iterate over scaled radii}
+\DoneMiniTask{Need to iterate over radii and make predictions.  Then I need to create a profile for each aexp, nu pair (or X product)}
+
+
+\Diss
+\Task{Something about line of sight dl vs. dV in the EMM description?}
+\MiniTask{Look up the links I saved}
+\MiniTask{Decide how I want to ``correct'' this}
+
+\Errands
+\Task{ICM Minnesota Poster}
+\DoneMiniTask{Email title/abstract}
+
+\Task{Erwin's EoS paper (30 minutes)}
+\DoneMiniTask{Download and look over Erwin's EoS Paper}
+\DoneMiniTask{Pull from the repo}
+\MiniTask{Send email to meet at 2}
+\Task{Phil's paper}
+\DoneMiniTask{Download from email}
+\DoneMiniTask{2.3.3  (50 minutes)}
+\MiniTask{Appendix A}
+\MiniTask{Other parts(?)}
+\MiniTask{Email Phil and Andrey - make sure to start with positive, then follow with the constructive}
+
+\DoneTask{KICP one page annual report (1 hour en route home)}
+
+
+%%% ------------------------------------------------------------
+\WeeklyEntry{15 Aug 2016 - 19 Aug 2016}{Week 2}
+%%% ------------------------------------------------------------
+%%% ------------------------------------------------------------
+\DailyEntry{Monday, 15 Aug 2016}
+%%% ------------------------------------------------------------
+\IE
+\Task{Get functionality from dev/ to the run\_pipeline.py}
+\MiniTask{Port tested profile to the pipeline}
 \MiniTask{Add functionality for an integrated quantity, e.g. mass (the model *should* be close to the computed relation, good test - decide how I want to treat integrated quantities.}
 \MiniTask{Save the trained models (aexp, nu) pairs - pickle files(?)}
 
 \Task{Get Predicted Y-M Relation}
 \MiniTask{}
-
-
 
 \IP
 \Task{Get code to run on appropriate grid search parameters}
@@ -352,45 +360,6 @@ include anything else that you'd like us to hear about.}
 
 
 \Diss
-\Task{Something about line of sight dl vs. dV in the EMM description?}
-\MiniTask{Look up the links I saved}
-\MiniTask{Decide how I want to ``correct'' this}
-
-\Errands
-\Task{Erwin's EoS paper}
-\MiniTask{Download and look over \href{https://urldefense.proofpoint.com/v2/url?u=https-3A__bitbucket.org_ethlau_eos&d=CwMCaQ&c=-dg2m7zWuuDZ0MUcV7Sdqw&r=gJS8dUZZIuuJT4PmC0HIzER-8ltvgYEa7iI1ZqHFWqQ&m=KIyZYUSEXQh_YCPHD7mLMJRY-2zlck11La--5cznuPg&s=jWpko2c_6XCpxR-K04ogwVvb1O9rbwRhDrkRe-GNF7s&e=}{Erwin's EoS Paper}}
-\MiniTask{Pull from the repo}
-\MiniTask{Send email to meet at 2}
-\Task{Phil's paper}
-\MiniTask{Download from email}
-\MiniTask{2.3.3}
-\MiniTask{Appendix A}
-\MiniTask{Other parts(?)}
-\MiniTask{Email Phil and Andrey - make sure to start with positive, then follow with the constructive}
-
-\Task{KICP one page annual report}
-
-\MiniTask{1) Give us a feeling for the science you have been working on. Mention
-papers that you may have published over the past year or that are nearing
-completion.}
-
-\MiniTask{2) Tell us about collaborations you are taking part in
-  either within or outside of the KICP. Can the KICP play a role in
-  facilitating/improving these?}
-
-\Task{ICM Minnesota Poster}
-\DoneMiniTask{Email title/abstract}
-\MiniTask{Outline the poster - see A's sample}
-\MiniTask{Fill in each section ..... ....}
-
-%%% ------------------------------------------------------------
-\WeeklyEntry{15 Aug 2016 - 19 Aug 2016}{Week 2}
-%%% ------------------------------------------------------------
-%%% ------------------------------------------------------------
-\DailyEntry{Monday, 15 Aug 2016}
-%%% ------------------------------------------------------------
-
-\Diss
 \Task{Remove the metallicity figure - can’t find colorbar that went here. Maybe add the figure of clumping for NR, CSF, and AGN instead?}
 
 \Diss
@@ -398,7 +367,10 @@ completion.}
 \MiniTask{Add citations for: Ramses (the Martizzi and Dubois papers), Choi+Ostriker papers, Steinborn+ in the Munich group, which was based on the Gaspari+.... }
 \Minitask{Emphasize that these works provide the context for future work as outlined in Chapter 5.}
 
-
+\Errands
+\Task{ICM Minnesota Poster}
+\MiniTask{Outline the poster - see A's sample (30 minutes)}
+\MiniTask{Fill in each section ..... .... (30 minutes/day for week 2)}
 
 
 
