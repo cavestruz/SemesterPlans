@@ -203,7 +203,7 @@ Emphasize that these works provide the context for future work as outlined in Ch
 \MiniTask{Contact Registrar}
 \MiniTask{Forward relevant info to MMiller}
 
-\MajorProjectDescription{\textcolor{magenta}{Errands}}
+\MajorProjectDescription{\textcolor{magenta}{Errands}
 \Task{Email Gourav relevant papers for ICM scaling}
 \MiniTask{Analytic formulation, Dalal+10}
 \MiniTask{Non-thermal pressure fraction, Nelson+14b, Avestruz+16}
@@ -306,12 +306,6 @@ Emphasize that these works provide the context for future work as outlined in Ch
 \DoneMiniTask{Create a module/function to iterate over scaled radii}
 \DoneMiniTask{Need to iterate over radii and make predictions.  Then I need to create a profile for each aexp, nu pair (or X product)}
 
-
-\Diss
-\Task{Something about line of sight dl vs. dV in the EMM description?}
-\MiniTask{Look up the links I saved}
-\MiniTask{Decide how I want to ``correct'' this}
-
 \Errands
 \Task{ICM Minnesota Poster}
 \DoneMiniTask{Email title/abstract}
@@ -322,34 +316,256 @@ Emphasize that these works provide the context for future work as outlined in Ch
 \MiniTask{Send email to meet at 2}
 \Task{Phil's paper}
 \DoneMiniTask{Download from email}
-\DoneMiniTask{2.3.3  (50 minutes)}
-\MiniTask{Appendix A}
-\MiniTask{Other parts(?)}
-\MiniTask{Email Phil and Andrey - make sure to start with positive, then follow with the constructive}
-
-\DoneTask{KICP one page annual report (1 hour en route home)}
-
+\DoneMiniTask{2.3.3  (60 minutes)}
+\DoneMiniTask{Email Phil and Andrey - make sure to start with positive, then follow with the constructive}
+\DoneTask{KICP one page annual report (60 minutes)}
 
 %%% ------------------------------------------------------------
+\vspace{10pt}
 \WeeklyEntry{15 Aug 2016 - 19 Aug 2016}{Week 2}
 %%% ------------------------------------------------------------
 %%% ------------------------------------------------------------
 \DailyEntry{Monday, 15 Aug 2016}
 %%% ------------------------------------------------------------
-\IE
-\Task{Get functionality from dev/ to the run\_pipeline.py}
-\MiniTask{Port tested profile to the pipeline}
-\MiniTask{Add functionality for an integrated quantity, e.g. mass (the model *should* be close to the computed relation, good test - decide how I want to treat integrated quantities.}
-\MiniTask{Save the trained models (aexp, nu) pairs - pickle files(?)}
+\TravelTalks
+\Task{ICM Minnesota Poster}
+\DoneMiniTask{Outline the poster, put in headers, abstract - see A's
+  sample (75 minutes)}
+\DoneMiniTask{Version the latex of poster}
 
-\Task{Get Predicted Y-M Relation}
-\MiniTask{}
+\Errands
+\Task{Email Gourav relevant papers for ICM scaling}
+\DoneMiniTask{Analytic formulation, Dalal+10}
+\DoneMiniTask{Non-thermal pressure fraction, Nelson+14b, Yu+15, Lau+15, Avestruz+16}
+\DoneTask{Chat with Andrew about seminar committee}
+\Task{Email Nadya}
+
+\IE
+\DoneTask{Get functionality from dev/ to the run\_pipeline.py}
+\DoneMiniTask{Port tested profile to the pipeline}
+\DoneMiniTask{Get a plotting functionality in the predictions object}
+
+
+
+%%% ------------------------------------------------------------
+\DailyEntry{Tuesday, 16 Aug 2016}
+%%% ------------------------------------------------------------
+
+\TravelTalks
+\Task{ICM Minnesota Poster}
+\MiniTask{Work on accretion section}
+\MiniTask{Transfer the outskirts image - caption with core sensitive to cooling and feedback}
+\MiniTask{Transfer the accretion evolution - caption with clusters accreting more at higher redshifts}
+
 
 \IP
 \Task{Get code to run on appropriate grid search parameters}
 \MiniTask{Look into \href{http://scikit-image.org/docs/dev/api/skimage.feature.html#skimage.feature.hog}{HOG}}
 \MiniTask{Better understand what each kwarg setting means: (1) Orientations, (2) pixels\_per\_cell, (3) cells\_per\_block}
 \MiniTask{Put the image production into a function that takes in a set of parameters of each}
+
+
+\Diss
+\Task{Something about line of sight dl vs. dV in the EMM description?}
+\MiniTask{Look up the links I saved}
+\MiniTask{Decide how I want to ``correct'' this}
+
+\IE
+\Task{Get Predicted Y-M Relation}
+\MiniTask{Add functionality for an integrated quantity, e.g. mass (the model *should* be close to the computed relation, good test - decide how I want to treat integrated quantities.}
+\MiniTask{Save the trained models (aexp, nu) pairs - pickle files(?)}
+
+
+\Errands
+\Task{Email Gourav relevant papers for ICM scaling}
+\MiniTask{Two sentence description of what to get from each}
+\MiniTask{One paragraph description of overall goal of project}
+
+
+
+
+
+%%% ------------------------------------------------------------
+\DailyEntry{Wednesday, 17 Aug 2016}
+%%% ------------------------------------------------------------
+
+\TravelTalks
+\Task{ICM Minnesota Poster}
+\DoneMiniTask{Work on evolution ``question'' section}
+\DoneMiniTask{Transfer the clumping image and evolution due to clumping - caption with ``little evolution''}
+\DoneMiniTask{Transfer the stirring image - caption with ``most evolution''}
+
+
+%%% ------------------------------------------------------------
+\DailyEntry{Thursday, 18 Aug 2016}
+%%% ------------------------------------------------------------
+
+\TravelTalks
+\Task{ICM Minnesota Poster}
+\DoneMiniTask{Work on r200m section}
+\DoneMiniTask{Transfer the scaling figure - caption with critical slow, mean scales with accretion shock}
+
+
+\Errands
+\DoneTask{Email Davide: My paper (non-thermal component accounts for self-similarity), Kaylea's paper (fitting wrt 200m), and overall feedback on HSE paper emphasizing that the iteraive correction they propose is most useful, particularly between 2500c and 500c}
+\Task{Email Andrey asking thoughts on Y-M relation (Fig 12) of Hahn+15, with RhapsodyG.  Simulations are wayyy tighter than the observations!}
+\DoneTask{Email Tamara abou going to SACNAS - representation from the Provost's office?}
+\DoneTask{Email Carlos (working with Tamara) about going to SACNAS}
+
+%%% ------------------------------------------------------------
+\DailyEntry{Friday, 19 Aug 2016}
+%%% ------------------------------------------------------------
+
+\TravelTalks
+\DoneTask{ICM Minnesota Poster}
+\DoneMiniTask{Work on r200m section}
+
+%%% ------------------------------------------------------------
+\vspace{10pt}
+\WeeklyEntry{22 Aug 2016 - 26 Aug 2016}{Week 3}
+%%% ------------------------------------------------------------
+%%% ------------------------------------------------------------
+\DailyEntry{Monday, 22 Aug 2016}
+%%% ------------------------------------------------------------
+\TravelTalks
+\DoneTask{At Minnesota ICM Conference}
+
+%%% ------------------------------------------------------------
+\DailyEntry{Tuesday, 23 Aug 2016}
+%%% ------------------------------------------------------------
+\TravelTalks
+\DoneTask{At Minnesota ICM Conference}
+
+%%% ------------------------------------------------------------
+\DailyEntry{Wednesday, 24 Aug 2016}
+%%% ------------------------------------------------------------
+\TravelTalks
+\DoneTask{At Minnesota ICM Conference}
+
+\Errands
+\DoneTask{Email Beth An about reimbursements}
+
+%%% ------------------------------------------------------------
+\DailyEntry{Thursday, 25 Aug 2016}
+%%% ------------------------------------------------------------
+
+\IP
+\Task{Get plot of C versus score}
+\DoneMiniTask{Look at how to set up multiple jobs - I think this is a qsub system (PBS).  Find out memory, and my access to nodes on Orion.  }
+\MiniTask{\href{https://linuxinfo.physik.hu-berlin.de/pbs.html}{PBS info}}
+\DoneMiniTask{Look up multiprocessing instead to keep it in python.}
+\DoneMiniTask{Apply multiprocessing - redo the pipeline to be flexible with imageprocessing.  Use config file}
+\DoneMiniTask{Change to somehow get score all in one place}
+
+\DoneMiniTask{Might want to check on how this looks with *no* median filtering  Just the HOG}
+
+%%% ------------------------------------------------------------
+\DailyEntry{Friday, 26 Aug 2016}
+%%% ------------------------------------------------------------
+
+\Errands
+\DoneTask{Call for Yale NetID password: (203) 432-9000, or helpdesk(at)yale.edu}
+
+\Errands
+\DoneTask{Add Han and Mila to bitbucket team}
+
+%%% ------------------------------------------------------------
+\vspace{10pt}
+\WeeklyEntry{29 Aug 2016 - 02 Sep 2016}{Week 4}
+%%% ------------------------------------------------------------
+
+%%% ------------------------------------------------------------
+\DailyEntry{Monday, 29 Aug 2016}
+%%% ------------------------------------------------------------
+
+\IP
+\MiniTask{Check rotation scale invariant descriptors: SIFT, SURF, ORB - or, orb, daisy, hessian_matrix_det.... etc.}
+
+
+\Errands
+\DoneTask{Get set up on FSP alumni page}
+
+\Task{Resubmit temperature paper}
+\DoneMiniTask{Pull Erwin's changes (there might be some issues)}
+\DoneMiniTask{Make sure all files are there - change to normal f1.. f2 naming system}
+\DoneMiniTask{Look over response to referee file to make sure everything is addressed}
+
+\Task{Reimbursements}
+\DoneMiniTask{EWASS flight proof of purchase}
+
+
+%%% ------------------------------------------------------------
+\DailyEntry{Tuesday, 30 Aug 2016}
+%%% ------------------------------------------------------------
+\TravelTalks
+\DoneMiniTask{Go through slides for talk, decide on modifications}
+
+%%% ------------------------------------------------------------
+\DailyEntry{Wednesday, 30 Aug 2016}
+%%% ------------------------------------------------------------
+
+\TravelTalks
+\DoneTask{Swap outskirts slides - (1) Are cluster outskirts ideal for mass measurements? (2) Accretion stirs and clumps cluster outskirts}
+\DoneTask{Swap out clumpy decomposition zhuravleva slide with break down}
+
+
+%%% ------------------------------------------------------------
+\DailyEntry{Thursday, 01 Sep 2016}
+%%% ------------------------------------------------------------
+\TravelTalks
+\DoneTask{Fellows at the Frontiers}
+
+%%% ------------------------------------------------------------
+\DailyEntry{Friday, 02 Sep 2016}
+%%% ------------------------------------------------------------
+\TravelTalks
+\DoneTask{Fellows at the Frontiers}
+
+
+%%% ------------------------------------------------------------
+\vspace{10pt}
+\WeeklyEntry{06 Sep 2016 - 09 Sep 2016}{Week 5}
+%%% ------------------------------------------------------------
+
+%%% ------------------------------------------------------------
+\DailyEntry{Tuesday, 06 Sep 2016}
+%%% ------------------------------------------------------------
+
+\Errands
+\Task{Personal day - various errands to take care of post-conference
+  and long weekend travel}
+
+%%% ------------------------------------------------------------
+\DailyEntry{Wednesday, 07 Sep 2016}
+%%% ------------------------------------------------------------
+
+\Errands
+\DoneTask{Resubmit temperature paper}
+\DoneMiniTask{Get on ApJ website}
+\DoneMiniTask{Upload and resubmit}
+\DoneMiniTask{Forward Erwin and Daisuke the email}
+
+
+\Task{Reimbursements}
+\MiniTask{Minnesota}
+\MiniTask{Fellows at the Frontiers - CIERA expense report, ask about travel on L (\$5?)}
+
+\Task{NSF reporting for KICP: PIN 3529}
+\MiniTask{\href{https://www.fastlane.nsf.gov/cgi-bin/people}{NSF form}}
+
+\Task{AGN - Look at particle reader and CART code, identify how AGN particles are stored.}
+\Task{AGN - Figure out how to pull AGN data.}
+
+\IP
+\MiniTask{No clipping or normalization, norm=True in HOG, run grid search to get HOG parameters, get score vs. C plot}
+
+
+\Task{Train on more of the data}
+\MiniTask{Check if rotations matter in HOG.... I think they do.}
+\MiniTask{Get set up on midway, especially if there's more memory - Email RCC consultant}
+\MiniTask{Find out how to be able to use tensor flow}
+
+
 \MiniTask{Need to check problem with UserWarning: \textit{Possible precision loss when converting from float64 to uint8}}
 \MiniTask{Note: Referencing \href{http://scikit-image.org/docs/dev/user_guide/data_types.html}{Data types of skimage}}
 \MiniTask{Need to check problem when running on whole dataset with \href{http://stackoverflow.com/questions/30834132/multiprocessing-ioerror-bad-message-length}{Pool}}
@@ -357,7 +573,6 @@ Emphasize that these works provide the context for future work as outlined in Ch
 \Task{Add in classifiers}
 \MiniTask{Look into \href{http://stackoverflow.com/questions/14173128/resize-hog-feature-to-put-in-classifier-scikit-learn}{classifiers}}
 \MiniTask{}
-
 
 \Diss
 \Task{Remove the metallicity figure - can’t find colorbar that went here. Maybe add the figure of clumping for NR, CSF, and AGN instead?}
@@ -367,10 +582,6 @@ Emphasize that these works provide the context for future work as outlined in Ch
 \MiniTask{Add citations for: Ramses (the Martizzi and Dubois papers), Choi+Ostriker papers, Steinborn+ in the Munich group, which was based on the Gaspari+.... }
 \Minitask{Emphasize that these works provide the context for future work as outlined in Chapter 5.}
 
-\Errands
-\Task{ICM Minnesota Poster}
-\MiniTask{Outline the poster - see A's sample (30 minutes)}
-\MiniTask{Fill in each section ..... .... (30 minutes/day for week 2)}
 
 
 
