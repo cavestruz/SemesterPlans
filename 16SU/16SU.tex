@@ -111,6 +111,11 @@
   \Project{\textcolor{blue}{Dissertation Revisions}}
 }
 
+\newcommand{\AGN}[0]{
+  \Project{\textcolor{orange}{AGN Feedback}}
+}
+
+
 \newcommand{\Errands}[0]{
   \Project{\textcolor{magenta}{Errands}}
 }
@@ -203,7 +208,7 @@ Emphasize that these works provide the context for future work as outlined in Ch
 \MiniTask{Contact Registrar}
 \MiniTask{Forward relevant info to MMiller}
 
-\MajorProjectDescription{\textcolor{magenta}{Errands}
+\MajorProjectDescription{\textcolor{magenta}{Errands}}
 \Task{Email Gourav relevant papers for ICM scaling}
 \MiniTask{Analytic formulation, Dalal+10}
 \MiniTask{Non-thermal pressure fraction, Nelson+14b, Avestruz+16}
@@ -370,11 +375,6 @@ Emphasize that these works provide the context for future work as outlined in Ch
 \MiniTask{Look up the links I saved}
 \MiniTask{Decide how I want to ``correct'' this}
 
-\IE
-\Task{Get Predicted Y-M Relation}
-\MiniTask{Add functionality for an integrated quantity, e.g. mass (the model *should* be close to the computed relation, good test - decide how I want to treat integrated quantities.}
-\MiniTask{Save the trained models (aexp, nu) pairs - pickle files(?)}
-
 
 \Errands
 \Task{Email Gourav relevant papers for ICM scaling}
@@ -479,7 +479,7 @@ Emphasize that these works provide the context for future work as outlined in Ch
 %%% ------------------------------------------------------------
 
 \IP
-\MiniTask{Check rotation scale invariant descriptors: SIFT, SURF, ORB - or, orb, daisy, hessian_matrix_det.... etc.}
+\MiniTask{Check rotation scale invariant descriptors: SIFT, SURF, ORB - or, orb, daisy, hessian\_matrix\_det.... etc.}
 
 
 \Errands
@@ -545,20 +545,134 @@ Emphasize that these works provide the context for future work as outlined in Ch
 \DoneMiniTask{Upload and resubmit}
 \DoneMiniTask{Forward Erwin and Daisuke the email}
 
+\DoneTask{Email Nora summary of meeting}
 
-\Task{Reimbursements}
-\MiniTask{Minnesota}
-\MiniTask{Fellows at the Frontiers - CIERA expense report, ask about travel on L (\$5?)}
+%%% ------------------------------------------------------------
+\DailyEntry{Friday, 07 Sep 2016}
+%%% ------------------------------------------------------------
 
-\Task{NSF reporting for KICP: PIN 3529}
-\MiniTask{\href{https://www.fastlane.nsf.gov/cgi-bin/people}{NSF form}}
-
-\Task{AGN - Look at particle reader and CART code, identify how AGN particles are stored.}
-\Task{AGN - Figure out how to pull AGN data.}
+\AGN
+\DoneTask{AGN - Look at particle reader and CART code, identify how AGN particles are stored.}
+\DoneTask{AGN - Figure out how to pull AGN data.}
 
 \IP
-\MiniTask{No clipping or normalization, norm=True in HOG, run grid search to get HOG parameters, get score vs. C plot}
+\DoneMiniTask{No normalization, run grid search to get HOG parameters, get score vs. C plot - Scores are worse}
 
+
+
+%%% ------------------------------------------------------------
+\vspace{10pt}
+\WeeklyEntry{12 Sep 2016 - 16 Sep 2016}{Week 6}
+%%% ------------------------------------------------------------
+
+%%% ------------------------------------------------------------
+\DailyEntry{Monday, 12 Sep 2016}
+%%% ------------------------------------------------------------
+
+\IE
+\Task{Summary of three parts to ICM evolution}
+\DoneMiniTask{Copy and paste email content from Gourav's correspondence}
+
+\Errands
+\DoneTask{NSF reporting for KICP: Award number 1125897, PIN 3529-->4231}
+\MiniTask{\href{https://www.fastlane.nsf.gov/cgi-bin/people}{NSF form}}
+
+\DoneTask{Prep LUMA Call}
+\DoneMiniTask{Self-care during family and eldercare conversations}
+\DoneMiniTask{Working with a student - there's just too much to do: Sample project descriptions?}
+
+\DoneTask{Reimbursements}
+\DoneMiniTask{Fellows at the Frontiers - CIERA expense report, ask about travel on L (5 dollars?)}
+
+%%% ------------------------------------------------------------
+\DailyEntry{Tuesday, 13 Sep 2016}
+%%% ------------------------------------------------------------
+
+\IE
+\DoneTask{Summary of three parts to ICM evolution}
+\DoneMiniTask{Add details/motivation of each and steps}
+
+
+%%% ------------------------------------------------------------
+\DailyEntry{Wednesday, 14 Sep 2016}
+%%% ------------------------------------------------------------
+
+\IE
+\Task{Summary of three parts to ICM evolution}
+\DoneMiniTask{Chat with Huanqing}
+\DoneMiniTask{Email Andrey project draft}
+
+%%% ------------------------------------------------------------
+\DailyEntry{Thursday, 15 Sep 2016}
+%%% ------------------------------------------------------------
+\IP
+\Task{Effects of rotation}
+\DoneMiniTask{Go through sample image processing with rotation to check for spurious artifacts}
+\DoneMiniTask{Incorporate 90, 180, and 270 degree rotations in the training and test sets (factor of 4 increase).}
+
+%%% ------------------------------------------------------------
+\DailyEntry{Friday, 16 Sep 2016}
+%%% ------------------------------------------------------------
+
+\AGN
+\DoneTask{Branch for AGN\_KICKS off of the default in Nick's repo}
+\DoneTask{Start going through diff between AGN\_KICKS from my old version with Nick's latest repo}
+
+%%% ------------------------------------------------------------
+\vspace{10pt}
+\WeeklyEntry{19 Sep 2016 - 23 Sep 2016}{Week 7}
+%%% ------------------------------------------------------------
+
+%%% ------------------------------------------------------------
+\DailyEntry{Monday, 19 Sep 2016}
+%%% ------------------------------------------------------------
+
+\IP
+\Task{Effects of rotation in training set - ONLY training set (?)}
+\MiniTask{Incorporate rotations in the test train split}
+\MiniTask{Parallel run for multiple C results}
+\MiniTask{Email Nan and Matt score vs. C results}
+
+\Errands
+\Task{Set up travel for SACNAS, buy the membership, etc.}
+\MiniTask{Buy plane tickets}
+\MiniTask{Buy membership}
+\MiniTask{Get reimbursement for membership}
+
+%%% ------------------------------------------------------------
+\DailyEntry{Tuesday, 20 Sep 2016}
+%%% ------------------------------------------------------------
+
+\IP
+\Task{Find out why false positive or false negatives happen (features getting washed out, or what?)}
+\MiniTask{Mark out a false positive and false negative - go through image processing}
+\MiniTask{Look at the HOG output for false results and the true results, comparing the with/without arcs}
+\MiniTask{Look at if changing a HOG kwarg changes this in the image, in the histogram, and in the scores}
+
+
+\Errands
+\Task{Reimbursements - Minnesota}
+
+%%% ------------------------------------------------------------
+\DailyEntry{Friday, 23 Sep 2016}
+%%% ------------------------------------------------------------
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\IE
+\Task{Get Predicted Y-M Relation}
+\MiniTask{Add functionality for an integrated quantity, e.g. mass (the model *should* be close to the computed relation, good test - decide how I want to treat integrated quantities.}
+\MiniTask{Save the trained models (aexp, nu) pairs - pickle files(?)}
+
+\IP
+\Task{No regularization - c=inf.  Look at how many ``features'' there are, e.g. the size of the histogram output by HOG.}
+\Task{Daisy as an alternative}
+\MiniTask{Generate pickle files of a good daisy feature extraction (test out a few options to see what gets the arc feature out)}
+\Task{Look into least angle regression - this is in sklearn}
 
 \Task{Train on more of the data}
 \MiniTask{Check if rotations matter in HOG.... I think they do.}
@@ -572,16 +686,15 @@ Emphasize that these works provide the context for future work as outlined in Ch
 
 \Task{Add in classifiers}
 \MiniTask{Look into \href{http://stackoverflow.com/questions/14173128/resize-hog-feature-to-put-in-classifier-scikit-learn}{classifiers}}
-\MiniTask{}
+
+
 
 \Diss
 \Task{Remove the metallicity figure - can’t find colorbar that went here. Maybe add the figure of clumping for NR, CSF, and AGN instead?}
-
-\Diss
 \Task{Conclude with other works that have extended beyond the BS09 model}
 \MiniTask{Add citations for: Ramses (the Martizzi and Dubois papers), Choi+Ostriker papers, Steinborn+ in the Munich group, which was based on the Gaspari+.... }
 \Minitask{Emphasize that these works provide the context for future work as outlined in Chapter 5.}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
@@ -608,7 +721,7 @@ Emphasize that these works provide the context for future work as outlined in Ch
 \Key{Week 4: 8/29-9/2}{\textcolor{red}{Get SVM implemented}}
 \Key{}{\textcolor{brown}{Fellows at the Frontiers (Travel 8/31-9/2)}}
 \sepspace
-\Key{Week 5: 9/6-9/9}{\textcolor{red}{Test SVM parameters}}}
+\Key{Week 5: 9/6-9/9}{\textcolor{red}{Test SVM parameters}}
 \sepspace
 \Key{Week 6: 9/12-9/16}{}
 \sepspace
