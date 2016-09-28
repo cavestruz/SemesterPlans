@@ -628,35 +628,74 @@ Emphasize that these works provide the context for future work as outlined in Ch
 %%% ------------------------------------------------------------
 
 \IP
-\Task{Effects of rotation in training set - ONLY training set (?)}
-\MiniTask{Incorporate rotations in the test train split}
-\MiniTask{Parallel run for multiple C results}
-\MiniTask{Email Nan and Matt score vs. C results}
+\DoneTask{Effects of rotation in training set - ONLY training set (?)}
+\DoneMiniTask{Incorporate rotations in the test train split}
+\DoneMiniTask{Parallel run for multiple C results}
+\DoneMiniTask{Email Nan and Matt score vs. C results}
 
 \Errands
 \Task{Set up travel for SACNAS, buy the membership, etc.}
-\MiniTask{Buy plane tickets}
-\MiniTask{Buy membership}
-\MiniTask{Get reimbursement for membership}
+\DoneMiniTask{Buy membership}
+\DoneMiniTask{Get reimbursement for membership}
+
+\Task{Reimbursements - Minnesota}
+\DoneMiniTask{Upload half the receipts}
 
 %%% ------------------------------------------------------------
 \DailyEntry{Tuesday, 20 Sep 2016}
 %%% ------------------------------------------------------------
 
 \IP
-\Task{Find out why false positive or false negatives happen (features getting washed out, or what?)}
-\MiniTask{Mark out a false positive and false negative - go through image processing}
-\MiniTask{Look at the HOG output for false results and the true results, comparing the with/without arcs}
-\MiniTask{Look at if changing a HOG kwarg changes this in the image, in the histogram, and in the scores}
+\DoneTask{Effects of rotations}
+\DoneMiniTask{Rotate the training set for 45 degree rotations to see if that improves the score - something went wrong... sticking with 90 deg}
+
+\Task{Find out why false positive or false negatives happen (features getting washed out, rare orientation of the arc location, or what?)}
+\DoneMiniTask{Manually select the test/train split, and fit the training set for just one value of C - OR save the the trained LogisticRegression object, and make predictions for data that I haven't touched yet.  Yeah, do the latter.}
 
 
-\Errands
-\Task{Reimbursements - Minnesota}
+%%% ------------------------------------------------------------
+\DailyEntry{Wednesday, 21 Sep 2016}
+%%% ------------------------------------------------------------
+\IP
+\Task{False positives/negatives{
+\DoneMiniTask{When I predict, tag the ones that were false positives and false negatives}
+
+\IE
+\Task{Chat with Andrey about the MAH predictions}
+\DoneMiniTask{Email Andrey thoughts....}
+
+
+%%% ------------------------------------------------------------
+\DailyEntry{Thursday, 21 Sep 2016}
+%%% ------------------------------------------------------------
+
+
+\IP
+\Task{Why are some images misclassified?}
+\DoneMiniTask{Look at the HOG output for false results and the true results, comparing the with/without arcs}
+\DoneTask{Understand HOG parameters}
+\DoneMiniTask{15 min: Watch hog lecture}
+\MiniTask{\href{https://www.youtube.com/watch?v=0Zib1YEE4LU}{HOG lecture}}
+\DoneMiniTask{Look at if changing a HOG kwarg changes this in the image, in the histogram, and in the scores: run gridsearch with rotated images}
 
 %%% ------------------------------------------------------------
 \DailyEntry{Friday, 23 Sep 2016}
 %%% ------------------------------------------------------------
 
+\AGN
+\Task{Port kicks code into repo}
+\MiniTask{Outline the agn module, perhaps visualize all steps so the CCA section can be easily incorporated}
+\MiniTask{Diff the agn.c code for relevant lines of kicks}
+\MiniTask{Diff the agn\_step.c code for relevant lines of kicks}
+
+
+\Errands
+\Task{Reimbursements - Minnesota}
+\MiniTask{Submit}
+
+\Errands
+\Task{Set up travel for SACNAS, buy the membership, etc.}
+\MiniTask{Buy plane tickets}
 
 
 
